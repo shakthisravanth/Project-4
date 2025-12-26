@@ -15,7 +15,13 @@ public class FirstSpringProjectApplication {
 
 	@GetMapping("/")
 	public String welcome() {
-		return "<h1> <center> Welcome to Spring Boot </center> </h1> ";
+    	return """
+        <body style="margin:0; background-color:black;">
+            <h1 style="color: rgb(254, 186, 1); text-align:center;">
+                Welcome to Spring Boot
+            </h1>
+        </body>
+        """;
 	}
 
 }
