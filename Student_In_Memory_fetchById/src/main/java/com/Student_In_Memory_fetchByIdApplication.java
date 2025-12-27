@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class Student_In_Memory_fetchByIdApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(StudentInMemoryUpdateApplication.class, args);
+		SpringApplication.run(Student_In_Memory_fetchByIdApplication.class, args);
 	}
 
 }
