@@ -7,22 +7,21 @@ import org.springframework.stereotype.Service;
 
 import com.model.Student;
 
-@Service
+// Marks this class as a service layer component
 public class StudentService {
 
-	private List<Student> repo = new ArrayList<>();
+// In-memory list used as a student repository [ private List<Student> repo = new ArrayList<>(); ]
 
-	public StudentService() {
+// Zero param Constructor to initialize students list 
+	/* 
 		repo.add(new Student(1, "Rahul", 21));
 		repo.add(new Student(2, "Anita", 22));
-	}
+	*/
 
-	public List<Student> getAllStudents() {
-		return repo;
-	}
+// Method to get all students
+// Return type: List<Student>
 
-	public void addStudent(Student student) {
-		repo.add(student);
-	}
+// Method to add a new student
+// Return type: void
 
 }
