@@ -1,8 +1,8 @@
 run-button: >
-  cd /home/damner/code/Student_In_Memory_Update && mvn spring-boot:run
+  cd /home/damner/code/Student_In_Memory_fetchById && mvn spring-boot:run
 
 terminals:
-  - cd /home/damner/code/Student_In_Memory_Update && mvn spring-boot:run
+  - cd /home/damner/code/Student_In_Memory_fetchById && mvn spring-boot:run
 
 playground-view: browser
-project-name: Student_In_Memory_Update
+project-name: Student_In_Memory_fetchById
