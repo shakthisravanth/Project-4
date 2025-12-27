@@ -10,25 +10,26 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.model.Student;
 
-@RestController
+// Marks this class as a REST controller
+// Automatically converts responses to JSON
+
 public class StudentController {
+	
+	// In-memory list used as a student repository [ List<Student> repo = new ArrayList<>(); ]
 
-	List<Student> repo = new ArrayList<>();
-
-	public StudentController() {
+	// Constructor to add initial student data 
+	/*
 		repo.add(new Student(1, "Rahul", 21));
 		repo.add(new Student(2, "Anita", 22));
-	}
+	*/
 
-	@GetMapping("/all")
-	public List<Student> getAllStudents() {
-		return repo;
-	}
+	// Handles GET request to "/all"
+	// Returns all students
+	// Return type: List<Student>
 
-	@PostMapping("/add")
-	public String addStudent(@RequestBody Student student) {
-		repo.add(student);
-		return "Student added successfully";
-	}
+	// Handles POST request to "/add"
+	// Reads student data from request body
+	// Adds student to repository
+	// Return type: String (status message) =>  { "Student added successfully" }
 
 }
