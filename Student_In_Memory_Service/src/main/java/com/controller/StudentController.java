@@ -14,8 +14,8 @@ import com.service.StudentService;
 @RestController
 public class StudentController {
 
-	@Autowired
-	private StudentService service;
+	// @Autowired injects StudentService dependency
+	// write StudentService reference variable called service
 
 	@GetMapping("/all")
 	public List<Student> getStudents() {
