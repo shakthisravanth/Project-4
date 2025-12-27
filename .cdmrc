@@ -1,0 +1,8 @@
+run-button: >
+  cd /home/damner/code/StudentStaticDataToUI && mvn spring-boot:run
+
+terminals:
+  - cd /home/damner/code/StudentStaticDataToUI && mvn spring-boot:run
+
+playground-view: browser
+project-name: StudentStaticDataToUI
