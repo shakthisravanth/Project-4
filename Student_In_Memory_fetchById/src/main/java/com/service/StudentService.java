@@ -4,17 +4,15 @@ import java.util.List;
 
 import org.springframework.stereotype.Service;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import com.model.Student;
 import com.repository.StudentRepository;
 
 @Service
 public class StudentService {
 
+	@Autowired
 	private StudentRepository repository;
-
-	public StudentService(StudentRepository repository) {
-		this.repository = repository;
-	}
 
 	public List<Student> getAllStudents() {
 		return repository.getAllStudents();
