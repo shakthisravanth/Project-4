@@ -1,0 +1,8 @@
+run-button: >
+  cd /home/damner/code/Customer_Manager && mvn spring-boot:run
+
+terminals:
+  - cd /home/damner/code/Customer_Manager && mvn spring-boot:run
+
+playground-view: browser
+project-name: Customer_Manager
