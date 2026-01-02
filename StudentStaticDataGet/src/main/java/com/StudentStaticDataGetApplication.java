@@ -4,10 +4,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class StudentStaticDataToUiApplication {
+public class StudentStaticDataGetApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(StudentStaticDataToUiApplication.class, args);
+		SpringApplication.run(StudentStaticDataGetApplication.class, args);
 	}
 
 }
