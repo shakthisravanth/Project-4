@@ -11,26 +11,23 @@ import com.repo.CustomerRepository;
 @Service
 public class CustomerService {
 
-    @Autowired
-    private CustomerRepository repository;
+    // @Autowired injects CustomerRepository dependency
 
-    public List<Customer> getAllCustomers() {
-        return repository.getAllCustomers();
-    }
+    // CustomerRepository reference variable
+    
+    // Get all customers from repository
+    // Return type: List<Customer>
+    
+    // Get customer by id from repository
+    // Return type: Customer
+    
+    // Add a new customer using repository
+    // Return type: void
+    
+    // Update customer using repository
+    // Return type: boolean
+    
+    // Delete customer using repository
+    // Return type: boolean
 
-    public Customer getCustomerById(int id) {
-        return repository.getCustomerById(id);
-    }
-
-    public void addCustomer(Customer customer) {
-        repository.addCustomer(customer);
-    }
-
-    public boolean updateCustomer(int id, Customer customer) {
-        return repository.updateCustomer(id, customer);
-    }
-
-    public boolean deleteCustomer(int id) {
-        return repository.deleteCustomer(id);
-    }
 }
