@@ -11,44 +11,27 @@ import com.service.CustomerService;
 @RestController
 public class CustomerController {
 
-	@Autowired
-	private CustomerService service;
+	// @Autowired injects CustomerService dependency
 
-	@PostMapping("/customers")
-	public String addCustomer(@RequestBody Customer customer) {
-		service.addCustomer(customer);
-		return "Customer added successfully";
-	}
+	// CustomerService reference variable
+	
+	// Handle POST request to add a new customer
+	// Read customer data from request body
+	// Return type: String (success message)
+	
+	// Handle GET request to fetch all customers
+	// Return type: List<Customer>
+	
+	// Handle GET request to fetch customer by id
+	// Read id from URL path
+	// Return type: Object (Customer or error message)
+	
+	// Handle PUT request to update customer by id
+	// Read id from URL path and customer data from request body
+	// Return type: String (status message)
+	
+	// Handle DELETE request to delete customer by id
+	// Read id from URL path
+	// Return type: String (status message)
 
-	@GetMapping("/customers")
-	public List<Customer> getAllCustomers() {
-		return service.getAllCustomers();
-	}
-
-	@GetMapping("/customers/{id}")
-	public Object getCustomer(@PathVariable int id) {
-		Customer customer = service.getCustomerById(id);
-		if (customer == null) {
-			return "Customer not found";
-		}
-		return customer;
-	}
-
-	@PutMapping("/customers/{id}")
-	public String updateCustomer(@PathVariable int id, @RequestBody Customer customer) {
-		boolean updated = service.updateCustomer(id, customer);
-		if (updated) {
-			return "Customer updated successfully";
-		}
-		return "Customer not found";
-	}
-
-	@DeleteMapping("/customers/{id}")
-	public String deleteCustomer(@PathVariable int id) {
-		boolean deleted = service.deleteCustomer(id);
-		if (deleted) {
-			return "Customer deleted successfully";
-		}
-		return "Customer not found";
-	}
 }
