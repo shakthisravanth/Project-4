@@ -16,36 +16,23 @@ import com.service.StudentService;
 @RestController
 public class StudentController {
 
-	@Autowired
-	private CustomerService service;
+		@Autowired
+	private StudentService service;
 
-	@PostMapping("/customers")
-	public String addCustomer(@RequestBody Customer customer) {
-		service.addCustomer(customer);
-		return "Customer added successfully";
+	@GetMapping("/all")
+	public List<Student> getStudents() {
+		return service.getAllStudents();
 	}
 
-	@GetMapping("/customers")
-	public List<Customer> getAllCustomers() {
-		return service.getAllCustomers();
-	}
+	@GetMapping("/getBy/{id}")
+	public Object getStudentById(@PathVariable int id) {
 
-	@GetMapping("/customers/{id}")
-	public Object getCustomer(@PathVariable int id) {
-		Customer customer = service.getCustomerById(id);
-		if (customer == null) {
-			return "Customer not found";
+		Student student = service.getStudentById(id);
+
+		if (student == null) {
+			return "Student not found";
 		}
-		return customer;
-	}
-
-	@PutMapping("/customers/{id}")
-	public String updateCustomer(@PathVariable int id, @RequestBody Customer customer) {
-		boolean updated = service.updateCustomer(id, customer);
-		if (updated) {
-			return "Customer updated successfully";
-		}
-		return "Customer not found";
+		return student;
 	}
 	
 	// DELETE /delete/{id} → delete student by id
