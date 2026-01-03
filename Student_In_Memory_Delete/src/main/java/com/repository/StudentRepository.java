@@ -34,12 +34,13 @@ public class StudentRepository {
 		return null;
 	}
 
-	public boolean deleteStudent(int id) {
-		Student student = getStudentById(id);
-		if (student != null) {
-			students.remove(student);
-			return true;
-		}
-		return false;
-	}
+	// Method to delete a student by id
+	// Return type: boolean
+	
+	// Find student using id
+	
+	// If student exists, remove from list and return true
+	
+	// If student not found, return false
+
 }
