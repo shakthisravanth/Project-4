@@ -22,8 +22,7 @@ public class StudentService {
 		return repository.getStudentById(id);
 	}
 
-	public boolean deleteStudent(int id) {
-		return repository.deleteStudent(id);
-	}
+	// Method to delete student using repository
+	// Return type: boolean
 
 }
