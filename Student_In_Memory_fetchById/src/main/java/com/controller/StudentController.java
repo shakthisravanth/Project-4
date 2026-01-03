@@ -23,16 +23,6 @@ public class StudentController {
 		return service.getAllStudents();
 	}
 
-	@GetMapping("/getBy/{id}")
-	public Object getStudentById(@PathVariable int id) {
-
-		Student student = service.getStudentById(id);
-
-		if (student == null) {
-			return "Student not found";
-		}
-		return student;
-	}
 
 	@PostMapping("/add")
 	public String addStudent(@RequestBody Student student) {
@@ -42,4 +32,9 @@ public class StudentController {
 		return "Student added successfully";
 
 	}
+
+	// Get student using id
+	// Accepts id as parameter
+	// Return type: Student
+	
 }
