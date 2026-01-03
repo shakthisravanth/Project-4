@@ -22,8 +22,9 @@ public class StudentService {
 		repository.addStudent(student);
 	}
 
-	public Student getStudentById(int id) {
-		return repository.getStudentById(id);
-	}
+	// Method to get student by id using repository
+	// Accepts student id as parameter
+	// Return type: Student
+
 	
 }
