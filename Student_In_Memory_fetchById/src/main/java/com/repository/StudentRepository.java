@@ -25,12 +25,15 @@ public class StudentRepository {
 		students.add(student);
 	}
 
-	public Student getStudentById(int id) {
-		for (Student s : students) {
-			if (s.getId() == id) {
-				return s;
-			}
-		}
-		return null;
-	}
+	// Method to get student by id
+	// Return type: Student
+	
+	// Loop through students list
+	
+	// Check if student id matches
+	
+	// Return student if found
+	
+	// Return null if not found
+
 }
