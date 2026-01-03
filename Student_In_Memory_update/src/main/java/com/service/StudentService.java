@@ -22,8 +22,9 @@ public class StudentService {
 		return repository.getStudentById(id);
 	}
 
-	public boolean updateStudent(int id, Student student) {
-		return repository.updateStudent(id, student);
-	}
+	// Method to update student
+	// Accepts student id and Student object as parameters
+	// Return type: boolean
+
 
 }
