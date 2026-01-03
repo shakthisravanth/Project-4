@@ -30,13 +30,15 @@ public class StudentRepository {
 		return null;
 	}
 
-	public boolean updateStudent(int id, Student updatedStudent) {
-		Student existingStudent = getStudentById(id);
-		if (existingStudent != null) {
-			existingStudent.setName(updatedStudent.getName());
-			existingStudent.setAge(updatedStudent.getAge());
-			return true;
-		}
-		return false;
-	}
+	// Method to update student details using id
+	// Return type: boolean
+	
+	// Find existing student by id
+	
+	// If student exists, update name and age
+	
+	// Return true if update is successful
+	
+	// Return false if student not found
+
 }
