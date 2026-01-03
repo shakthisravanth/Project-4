@@ -16,7 +16,7 @@ import com.service.StudentService;
 @RestController
 public class StudentController {
 
-		@Autowired
+	@Autowired
 	private StudentService service;
 
 	@GetMapping("/all")
