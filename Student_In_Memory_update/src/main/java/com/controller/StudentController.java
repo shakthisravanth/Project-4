@@ -34,15 +34,17 @@ public class StudentController {
 		return student;
 	}
 
-	@PutMapping("/update/{id}")
-	public String updateStudent(@PathVariable int id, @RequestBody Student student) {
+	// Handle HTTP PUT request to update student
 
-		boolean updated = service.updateStudent(id, student);
+	// Read student id from URL path
+	
+	// Read updated student data from request body
+	
+	// Call service layer to update student
+	
+	// Return success message if updated
+	
+	// Return not found message if student does not exist
 
-		if (updated) {
-			return "Student updated successfully";
-		}
-		return "Student not found";
-	}
 
 }
