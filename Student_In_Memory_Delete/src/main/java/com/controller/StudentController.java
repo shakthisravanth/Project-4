@@ -16,32 +16,18 @@ import com.service.StudentService;
 @RestController
 public class StudentController {
 
-	@Autowired
-	private StudentService service;
+	// Inject StudentService using @Autowired
+	
+	// StudentService reference variable
+	
+	// GET /all → fetch all students
+	// Return type: List<Student>
+	
+	// GET /getBy/{id} → fetch student by id
+	// Return type: Object (Student if found, else message)
+	
+	// DELETE /delete/{id} → delete student by id
+	// Return type: String (status message)
 
-	@GetMapping("/all")
-	public List<Student> getStudents() {
-		return service.getAllStudents();
-	}
-
-	@GetMapping("/getBy/{id}")
-	public Object getStudentById(@PathVariable int id) {
-
-		Student student = service.getStudentById(id);
-
-		if (student == null) {
-			return "Student not found";
-		}
-		return student;
-	}
-
-	@DeleteMapping("/delete/{id}")
-	public String deleteStudent(@PathVariable int id) {
-		boolean deleted = service.deleteStudent(id);
-		if (deleted) {
-			return "Student deleted successfully";
-		}
-		return "Student not found";
-	}
 
 }
